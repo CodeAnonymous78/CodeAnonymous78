@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="1.png" type="image/x-icon">
+    <title>Open AI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body style="background-color: #ebfaeb;">
+    <nav class="navbar navbar-expand-lg  bg-black position-fixed " id="nav" >
+        <div class="container-fluid">
+          <img src="1.png" style="width: 50px; height: 50px;">
+          &nbsp;
+          <a class="navbar-brand text-light" href="#" style="font-weight: bolder; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: larger;">OpenAI</a>
+          
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon  " ></span>
+          </button>
+          <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-light" aria-current="page" href="index.html" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-weight: bolder;">Documentation</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link active text-light" href="api.html" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-weight: bolder;">API Refrence</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active text-light" href="about.html" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-weight: bolder;">About</a>
+              </li>
+            </ul>
+         
+          </div>
+        </div>
+      </nav>
+    &nbsp;  
+    <div  style="margin-top: 80px; margin-left: 100px;  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: small;  ">
+      <h1>Welcome to the OpenAI developer platform</h1>
+&nbsp;
+      <h2>Start with the basics</h2>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <h1>Introduction</h1>
+      &nbsp;&nbsp; &nbsp;&nbsp;
+   <p>The OpenAI API can be applied to virtually any task. We offer a range of<b style="color: green;"> models </b>with different capabilities and price points, as well as the ability to <b style="color: green;">fine-tune</b> custom models.</p>
+   &nbsp;&nbsp; &nbsp;&nbsp;
+   <h2>Resources</h2>
+   <ol>
+    <li>
+    Experiment in the<b style="color: green;"> playground </b>
+    </li>
+  <li>Read the <b style="color: green;"> API reference</b>
+   </li>
+   <li> Visit the <b style="color: green;"> help center</b>
+    </li>
+    <li>
+      View the current API <b style="color: green;"> status</b>
+ 
+    </li>
+    <li>
+      Check out the <b style="color: green;"> OpenAI Developer Forum</b>
+  
+    </li>
+    <li>
+      Learn about our <b style="color: green;"> usage policies</b>
+    </li>
+   </ol>
+
+   &nbsp;&nbsp; &nbsp;&nbsp;
+<h1>Key concepts</h1>
+
+&nbsp;&nbsp; &nbsp;
+<h2>Text generation models</h2>
+&nbsp; &nbsp;
+<p>OpenAI's text generation models (often referred to as generative pre-trained transformers or "GPT" models for short), like GPT-4 and GPT-3.5, have been trained to understand natural and formal language. Models like GPT-4 allows text outputs in response to their inputs. The inputs to these models are also referred to as "prompts". Designing a prompt is essentially how you "program" a model like GPT-4, usually by providing instructions or some examples of how to successfully complete a task. Models like GPT-4 can be used across a great variety of tasks including content or code generation, summarization, conversation, creative writing, and more. Read more in our introductory <b style="color: green;">text generation guide</b> and in our<b style="color: green;"> prompt engineering guide.</b></p>
+
+&nbsp;&nbsp; &nbsp;
+<h2>Assistants</h2>
+&nbsp;&nbsp; &nbsp;
+<p>Assistants refer to entities, which in the case of the OpenAI API are powered by large language models like GPT-4, that are capable of performing tasks for users. These assistants operate based on the instructions embedded within the context window of the model. They also usually have access to tools which allows the assistants to perform more complex tasks like running code or retrieving information from a file. Read more about assistants in our<b style="color: green;"> Assistants API Overview.</b>
+
+</p>
+&nbsp;&nbsp; &nbsp;
+<h2>Embeddings</h2>
+&nbsp;&nbsp; &nbsp;
+<p>An embedding is a vector representation of a piece of data (e.g. some text) that is meant to preserve aspects of its content and/or its meaning. Chunks of data that are similar in some way will tend to have embeddings that are closer together than unrelated data. OpenAI offers text embedding models that take as input a text string and produce as output an embedding vector. Embeddings are useful for search, clustering, recommendations, anomaly detection, classification, and more. Read more about embeddings in our <b style="color: green;">embeddings guide.</b>
+</p>
+
+&nbsp;&nbsp; &nbsp;
+<h2>Tokens</h2>
+&nbsp;&nbsp; &nbsp;
+<p>Text generation and embeddings models process text in chunks called tokens. Tokens represent commonly occurring sequences of characters. For example, the string " tokenization" is decomposed as " token" and "ization", while a short and common word like " the" is represented as a single token. Note that in a sentence, the first token of each word typically starts with a space character. Check out our <b style="color: green;"> tokenizer tool</b> to test specific strings and see how they are translated into tokens. As a rough rule of thumb, 1 token is approximately 4 characters or 0.75 words for English text.
+<br><br><br>
+  One limitation to keep in mind is that for a text generation model the prompt and the generated output combined must be no more than the model's maximum context length. For embeddings models (which do not output tokens), the input must be shorter than the model's maximum context length. The maximum context lengths for each text generation and embeddings model can be found in the<b style="color: green;"> model index.</b>
+</p>
+
+
+
+
+&nbsp;
+&nbsp;
+&nbsp;
+<h1>Watch the first OpenAI Developer Day keynote</h1>
+
+
+
+
+
+
+&nbsp;
+&nbsp;
+
+
+    </div>
+ 
+
+<center>   
+      <iframe  width="650" height="400" src="https://www.youtube.com/embed/U9mJuUkhUzk?si=xth-zbm_0Z3ee28m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    
+   
+
+
+    </center>
+
+
+
+
+    &nbsp;
+    &nbsp;
+    
+
+
+
+
+    <footer class="bg-body-tertiary text-center text-lg-start">
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgb(0, 0, 0); color: #ebfaeb;">
+        © 2024 Copyright:
+        <a class="text-body" style=" text-decoration: none;">Open AI</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
